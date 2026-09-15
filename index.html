@@ -3,475 +3,148 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070a0f">
-  <meta name="description" content="Nordic Gaming Browser: una experiencia de navegación creada alrededor de tu juego.">
-  <meta property="og:title" content="Nordic Gaming Browser">
-  <meta property="og:description" content="Tu juego. Tu navegador. Sin distracciones.">
+  <meta name="theme-color" content="#080d14">
+  <meta name="description" content="Nordic Gaming Browser para Windows. Un navegador basado en Chromium con controles de FPS, latencia, personalización y herramientas para HaxBall. Información y precios en Discord.">
+  <meta property="og:title" content="Nordic Gaming Browser — HaxBall. A tu manera.">
+  <meta property="og:description" content="Controla tu experiencia en HaxBall: rendimiento, temas, resolución y herramientas de juego. Conoce Nordic y consulta los precios en Discord.">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
   <meta property="og:url" content="https://noordic.github.io/nordic-gaming-browser/">
-  <title>Nordic Gaming Browser</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #070a0f;
-      --surface: #0d121b;
-      --line: rgba(255,255,255,.1);
-      --text: #f4f7fb;
-      --muted: #9aa7b8;
-      --mint: #77f2cb;
-      --blue: #78a9ff;
-      --glow: rgba(119,242,203,.22);
-      --radius: 22px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-width: 320px;
-      background:
-        radial-gradient(circle at 78% 10%, rgba(67,107,255,.16), transparent 28rem),
-        radial-gradient(circle at 12% 32%, rgba(74,222,174,.1), transparent 24rem),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      opacity: .18;
-      background-image:
-        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: linear-gradient(to bottom, black, transparent 75%);
-    }
-    a { color: inherit; }
-    .shell { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
-    header {
-      height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 750;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    .mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(119,242,203,.35);
-      border-radius: 10px;
-      background: linear-gradient(145deg, rgba(119,242,203,.16), rgba(120,169,255,.08));
-      box-shadow: inset 0 0 20px rgba(119,242,203,.08), 0 0 32px rgba(119,242,203,.08);
-    }
-    .mark svg { width: 20px; height: 20px; }
-    nav { display: flex; gap: 28px; align-items: center; }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-      transition: color .2s ease;
-    }
-    nav a:hover, nav a:focus-visible { color: var(--text); }
-    .hero {
-      min-height: calc(100svh - 88px);
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: clamp(42px, 7vw, 96px);
-      align-items: center;
-      padding: 52px 0 92px;
-    }
-    .eyebrow {
-      width: fit-content;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin: 0 0 24px;
-      color: var(--mint);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--mint);
-      box-shadow: 0 0 16px var(--mint);
-    }
-    h1 {
-      margin: 0;
-      max-width: 700px;
-      font-size: clamp(52px, 7.2vw, 96px);
-      line-height: .91;
-      letter-spacing: -.065em;
-      font-weight: 780;
-    }
-    h1 span {
-      display: block;
-      color: transparent;
-      background: linear-gradient(100deg, var(--mint), #c8fff0 46%, var(--blue));
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-    .lead {
-      max-width: 560px;
-      margin: 28px 0 0;
-      color: var(--muted);
-      font-size: clamp(17px, 1.7vw, 20px);
-      line-height: 1.65;
-    }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
-    .button {
-      min-height: 50px;
-      padding: 0 21px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border: 1px solid var(--line);
-      border-radius: 13px;
-      background: rgba(255,255,255,.035);
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    }
-    .button.primary {
-      border-color: transparent;
-      background: var(--mint);
-      color: #06110e;
-      box-shadow: 0 12px 34px rgba(119,242,203,.18);
-    }
-    .button:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.24); }
-    .button.primary:hover { background: #9affdf; }
-    .button:focus-visible, a:focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; }
-
-    .showcase { position: relative; perspective: 1200px; }
-    .showcase::before {
-      content: "";
-      position: absolute;
-      width: 65%;
-      aspect-ratio: 1;
-      left: 18%;
-      top: 14%;
-      border-radius: 50%;
-      background: var(--glow);
-      filter: blur(70px);
-    }
-    .browser {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: var(--radius);
-      background: #090d14;
-      box-shadow: 0 35px 90px rgba(0,0,0,.48), inset 0 1px rgba(255,255,255,.06);
-      transform: rotateY(-4deg) rotateX(2deg);
-    }
-    .browser-top {
-      height: 62px;
-      padding: 0 17px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,.025);
-    }
-    .traffic { display: flex; gap: 6px; }
-    .traffic i { width: 8px; height: 8px; border-radius: 50%; background: #36404f; }
-    .traffic i:first-child { background: #ff6678; }
-    .traffic i:nth-child(2) { background: #f4c65c; }
-    .traffic i:last-child { background: #61dba4; }
-    .tab {
-      height: 34px;
-      min-width: 138px;
-      padding: 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 9px;
-      background: rgba(255,255,255,.055);
-      color: #dce5f1;
-      font-size: 11px;
-    }
-    .tab-badge {
-      width: 16px;
-      height: 16px;
-      display: grid;
-      place-items: center;
-      border-radius: 5px;
-      background: linear-gradient(145deg, var(--mint), var(--blue));
-      color: #08100e;
-      font-weight: 900;
-      font-size: 9px;
-    }
-    .address {
-      flex: 1;
-      height: 32px;
-      min-width: 0;
-      display: flex;
-      align-items: center;
-      padding: 0 13px;
-      border-radius: 9px;
-      background: rgba(0,0,0,.3);
-      color: #687587;
-      font-size: 10px;
-    }
-    .browser-body {
-      min-height: 455px;
-      display: grid;
-      grid-template-columns: 62px 1fr;
-    }
-    .rail {
-      padding: 20px 13px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      border-right: 1px solid var(--line);
-      background: rgba(255,255,255,.018);
-    }
-    .rail div {
-      width: 32px;
-      height: 32px;
-      display: grid;
-      place-items: center;
-      border-radius: 9px;
-      color: #748196;
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .rail .active { background: rgba(119,242,203,.12); color: var(--mint); }
-    .screen { padding: 22px; }
-    .screen-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-    .screen-head small { color: #6f7d91; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
-    .live {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #b9c6d8;
-      font-size: 9px;
-    }
-    .live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 10px var(--mint); }
-    .game-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 228px;
-      margin-top: 14px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      border: 1px solid rgba(255,255,255,.1);
-      border-radius: 17px;
-      background:
-        radial-gradient(circle at 72% 27%, rgba(119,242,203,.55), transparent 8%),
-        linear-gradient(125deg, rgba(15,27,37,.3), rgba(5,10,15,.85)),
-        linear-gradient(120deg, #255977, #19213a 48%, #0b1118);
-    }
-    .game-card::before {
-      content: "N";
-      position: absolute;
-      right: 3%;
-      top: -29%;
-      color: rgba(255,255,255,.045);
-      font-size: 245px;
-      font-weight: 900;
-      transform: rotate(8deg);
-    }
-    .game-card p { margin: 0 0 8px; color: var(--mint); font-size: 9px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
-    .game-card h2 { margin: 0; font-size: clamp(28px, 4vw, 44px); line-height: .95; letter-spacing: -.04em; }
-    .status-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
-    .status {
-      min-height: 82px;
-      padding: 13px;
-      border: 1px solid rgba(255,255,255,.075);
-      border-radius: 13px;
-      background: rgba(255,255,255,.025);
-    }
-    .status b { display: block; margin-bottom: 7px; color: #dfe7f2; font-size: 10px; }
-    .status span { color: #738198; font-size: 8px; line-height: 1.5; }
-    .status .ok { color: var(--mint); }
-
-    .features {
-      padding: 110px 0 120px;
-      border-top: 1px solid var(--line);
-    }
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
-      margin-bottom: 42px;
-    }
-    .section-head h2 { margin: 0; font-size: clamp(34px, 5vw, 58px); letter-spacing: -.045em; line-height: 1; }
-    .section-head p { max-width: 430px; margin: 0; color: var(--muted); line-height: 1.65; }
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .feature {
-      min-height: 235px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
-    }
-    .feature .number { color: var(--mint); font-size: 11px; font-weight: 800; letter-spacing: .16em; }
-    .feature h3 { margin: auto 0 10px; font-size: 21px; letter-spacing: -.025em; }
-    .feature p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-    footer {
-      padding: 25px 0 36px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      border-top: 1px solid var(--line);
-      color: #758297;
-      font-size: 12px;
-    }
-    footer a { text-decoration: none; color: #a9b5c6; }
-    footer a:hover { color: var(--mint); }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; padding-top: 38px; }
-      .hero-copy { max-width: 680px; }
-      .showcase { width: min(680px, 100%); }
-      .browser { transform: none; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .feature { min-height: 190px; }
-    }
-    @media (max-width: 620px) {
-      .shell { width: min(100% - 28px, 1160px); }
-      header { height: 72px; }
-      nav a:first-child { display: none; }
-      .hero { min-height: auto; gap: 52px; padding: 56px 0 78px; }
-      h1 { font-size: clamp(50px, 16vw, 72px); }
-      .browser-top { height: 52px; padding: 0 12px; gap: 10px; }
-      .tab { min-width: 108px; }
-      .browser-body { min-height: 365px; grid-template-columns: 48px 1fr; }
-      .rail { padding-inline: 8px; }
-      .screen { padding: 14px; }
-      .game-card { min-height: 190px; padding: 20px; }
-      .status-grid { grid-template-columns: 1fr; }
-      .status:nth-child(n+2) { display: none; }
-      .section-head { align-items: start; flex-direction: column; }
-      .features { padding: 82px 0; }
-      footer { flex-direction: column; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
-    }
-  </style>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nordic Gaming Browser — HaxBall. A tu manera.">
+  <meta name="twitter:description" content="Un navegador para Windows con herramientas integradas para HaxBall. Información y precios en Discord.">
+  <link rel="canonical" href="https://noordic.github.io/nordic-gaming-browser/">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Nordic Gaming Browser — HaxBall. A tu manera.</title>
 </head>
-<body>
-  <header class="shell">
-    <a class="brand" href="#" aria-label="Nordic Gaming Browser, inicio">
-      <span class="mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M6 18V6l12 12V6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      Nordic
+<body id="inicio">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="header shell">
+    <a class="brand" href="#inicio" aria-label="Nordic Gaming Browser, inicio">
+      <img src="assets/nordic-logo.png" width="48" height="48" alt="">
+      <span>Nordic<span class="brand-subtitle">GAMING BROWSER</span></span>
     </a>
     <nav aria-label="Navegación principal">
-      <a href="#funciones">Funciones</a>
-      <a href="https://github.com/noordic/nordic-gaming-browser" target="_blank" rel="noreferrer">GitHub &nearr;</a>
+      <a class="nav-section" href="#funciones">Funciones</a>
+      <a class="nav-section" href="#personalizacion">Tu configuración</a>
+      <a class="nav-contact" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Info y precios <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero shell">
+  <main id="contenido">
+    <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Gaming browser</p>
-        <h1>Tu juego.<span>Tu navegador.</span></h1>
-        <p class="lead">Nordic re&uacute;ne navegaci&oacute;n y gaming en una experiencia limpia, protegida y conectada. Todo lo que importa, sin salir de tu partida.</p>
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> HECHO PARA JUGAR HAXBALL</p>
+        <h1 id="hero-title">HaxBall.<br><span>A tu manera.</span></h1>
+        <p class="lead">Tu partida, con tus ajustes. Un navegador basado en Chromium que reúne controles de rendimiento, personalización y herramientas para HaxBall en un mismo lugar.</p>
         <div class="actions">
-          <a class="button primary" href="#funciones">Explorar funciones <span aria-hidden="true">&darr;</span></a>
-          <a class="button" href="https://github.com/noordic/nordic-gaming-browser" target="_blank" rel="noreferrer">Ver en GitHub <span aria-hidden="true">&nearr;</span></a>
+          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Info y precios en Discord <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#funciones">Conoce las funciones <span aria-hidden="true">↓</span></a>
         </div>
+        <p class="platform"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 2.2 6.5 1.3v6H0zm7.5-1L16 0v7.3H7.5zM0 8.3h6.5v6L0 13.4zm7.5 0H16V16l-8.5-1.2z"/></svg> Para Windows <span aria-hidden="true">/</span> Nordic Gaming Browser</p>
       </div>
+      <figure class="product-preview">
+        <div class="preview-heading"><span class="preview-label">DENTRO DE NORDIC</span><span>01 / INICIO</span></div>
+        <a class="screenshot-link" href="assets/nordic-home.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar captura de la página de inicio de Nordic">
+          <img class="home-capture" src="assets/nordic-home.png" width="1200" height="800" alt="Página de inicio de Nordic con el logo del dragón, acceso a HaxBall, marcadores, descargas, historial y opciones avanzadas." fetchpriority="high">
+        </a>
+        <figcaption><span>Tu punto de partida.</span> Interfaz de Nordic · Haz clic para ampliar <span aria-hidden="true">↗</span></figcaption>
+      </figure>
+    </section>
 
-      <div class="showcase" aria-label="Vista conceptual de Nordic Gaming Browser">
-        <div class="browser">
-          <div class="browser-top">
-            <span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span>
-            <div class="tab"><span class="tab-badge">N</span> Nordic Home</div>
-            <div class="address">nordic://home</div>
-          </div>
-          <div class="browser-body">
-            <aside class="rail" aria-hidden="true">
-              <div class="active">N</div>
-              <div>&#9707;</div>
-              <div>&#8769;</div>
-              <div>+</div>
-            </aside>
-            <div class="screen">
-              <div class="screen-head">
-                <small>Nordic command center</small>
-                <span class="live">Sistema listo</span>
-              </div>
-              <div class="game-card">
-                <p>Play without limits</p>
-                <h2>NORDIC<br>GAMING</h2>
-              </div>
-              <div class="status-grid">
-                <div class="status"><b>Browser Shield</b><span class="ok">Activo y protegido</span></div>
-                <div class="status"><b>Discord Presence</b><span>Conectado a tu partida</span></div>
-                <div class="status"><b>Nordic Update</b><span>Todo al d&iacute;a</span></div>
-              </div>
-            </div>
+    <div class="product-facts shell" aria-label="Características principales">
+      <p><strong>Chromium</strong><span>La base del navegador</span></p>
+      <p><strong>HaxBall</strong><span>Herramientas integradas</span></p>
+      <p><strong>8 temas</strong><span>Tu estilo, también al jugar</span></p>
+      <p><strong>Tu .CFG</strong><span>Guarda y carga tus ajustes</span></p>
+    </div>
+
+    <section class="section shell" id="funciones" aria-labelledby="features-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">EL JUEGO, BAJO TU CONTROL</p><h2 id="features-title">Los ajustes que<br>hacen tu partida.</h2></div>
+        <p>Del límite de FPS a las herramientas de sala. Configura Nordic según cómo juegas y lo que necesitas de tu equipo.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="feature-index">01 <span>RENDIMIENTO</span></span>
+          <h3>Encuentra tu ritmo.</h3>
+          <p>Elige tu límite de FPS o desactívalo, ajusta la calidad gráfica y selecciona un modo de latencia de renderizado para HaxBall.</p>
+          <span class="feature-detail">FPS · Gráficos · Latencia</span>
+        </article>
+        <article class="feature">
+          <span class="feature-index">02 <span>CONTROLES</span></span>
+          <h3>Afina cada pulsación.</h3>
+          <p>Configura el retraso y la repetición del teclado con Filter Keys. Usa los ajustes predefinidos o establece tus propios valores.</p>
+          <span class="feature-detail">Filter Keys · Ajustes de teclado</span>
+        </article>
+        <article class="feature">
+          <span class="feature-index">03 <span>PERSONALIZACIÓN</span></span>
+          <h3>Hazlo tuyo.</h3>
+          <p>Combina los temas del navegador con las apariencias HTML5, Flash o Nordic de HaxBall. Personaliza avatares, reacciones e imágenes de equipos.</p>
+          <span class="feature-detail">Temas · Avatares · Equipos</span>
+        </article>
+        <article class="feature">
+          <span class="feature-index">04 <span>EN PARTIDA</span></span>
+          <h3>Más a mano.</h3>
+          <p>Accede al selector de emojis, los controles del chat y las herramientas de sala. Ajusta la visibilidad del chat y utiliza las acciones de administración cuando tengas permisos.</p>
+          <span class="feature-detail">Chat · Emojis · Salas</span>
+        </article>
+        <article class="feature">
+          <span class="feature-index">05 <span>DESPUÉS DEL PARTIDO</span></span>
+          <h3>De la rec al informe.</h3>
+          <p>Analiza repeticiones de HaxBall, revisa estadísticas y prepara un informe con formato para Discord. También puedes guardarlo como texto.</p>
+          <span class="feature-detail">Repeticiones · Estadísticas · Informes</span>
+        </article>
+        <article class="feature">
+          <span class="feature-index">06 <span>TU NAVEGADOR</span></span>
+          <h3>Todo en su lugar.</h3>
+          <p>Elige tu página de inicio, organiza tus marcadores y consulta historial y descargas. Guarda y carga tu configuración con archivos .CFG.</p>
+          <span class="feature-detail">Inicio · Marcadores · Configuración</span>
+        </article>
+      </div>
+      <p class="section-note">El rendimiento depende de tu hardware y configuración. Los modos de latencia ajustan el renderizado del juego; no cambian el ping de tu conexión.</p>
+    </section>
+
+    <section class="personalization" id="personalizacion" aria-labelledby="settings-title">
+      <div class="shell settings-layout">
+        <div class="settings-copy">
+          <p class="eyebrow">A LA MEDIDA DE TU PANTALLA</p>
+          <h2 id="settings-title">Tu espacio.<br>Tu configuración.</h2>
+          <p class="settings-lead">Ajusta cómo se ve el juego, desde la ventana hasta el último detalle.</p>
+          <ul class="settings-list">
+            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Resolución y estirado</h3><p>Usa una resolución estándar o activa Estirar para definir una resolución interna personalizada, también en ventana normal.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Tus preferencias, guardadas</h3><p>Conserva tus ajustes y lleva tu configuración a un archivo .CFG para volver a cargarla cuando la necesites.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>En tu idioma</h3><p>Interfaz disponible en español, inglés y portugués, con temas que también se aplican al navegador.</p></div></li>
+          </ul>
+          <div class="themes" aria-label="Ocho temas del navegador">
+            <span class="swatch electric" title="Electric Blue"></span><span class="swatch night" title="Dark Night"></span><span class="swatch obsidian" title="Dark Obsidian"></span><span class="swatch gold" title="Golden Frost"></span><span class="swatch pink" title="Fancy Pink"></span><span class="swatch purple" title="Purple Nebula"></span><span class="swatch lava" title="Red Lava"></span><span class="swatch frost" title="White Frost"></span>
+            <span>8 formas de sentirlo tuyo.</span>
           </div>
         </div>
+        <figure class="settings-preview">
+          <div class="preview-heading"><span class="preview-label">OPCIONES AVANZADAS</span><span>02 / AJUSTES</span></div>
+          <a class="screenshot-link" href="assets/nordic-settings.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar captura de las opciones avanzadas de Nordic">
+            <img src="assets/nordic-settings.png" width="1200" height="900" loading="lazy" decoding="async" alt="Opciones avanzadas: resolución interna con Estirar, página principal, proveedor DNS e idioma del navegador.">
+          </a>
+          <figcaption>La resolución personalizada estira el contenido del navegador sin cambiar la resolución de Windows.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="features" id="funciones">
-      <div class="shell">
-        <div class="section-head">
-          <h2>Creado alrededor<br>de tu partida.</h2>
-          <p>Una experiencia enfocada que combina herramientas esenciales para jugar, compartir y mantenerte siempre listo.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature">
-            <span class="number">01 / PROTECT</span>
-            <h3>Protecci&oacute;n integrada</h3>
-            <p>Funciones protegidas del navegador pensadas para una sesi&oacute;n estable y bajo control.</p>
-          </article>
-          <article class="feature">
-            <span class="number">02 / CONNECT</span>
-            <h3>Presencia en Discord</h3>
-            <p>Tu actividad acompa&ntilde;a la partida para que tu comunidad sepa cu&aacute;ndo est&aacute;s jugando.</p>
-          </article>
-          <article class="feature">
-            <span class="number">03 / UPDATE</span>
-            <h3>Siempre actualizado</h3>
-            <p>Un flujo de actualizaci&oacute;n propio mantiene Nordic preparado para la pr&oacute;xima sesi&oacute;n.</p>
-          </article>
-        </div>
+    <section class="contact shell" id="discord" aria-labelledby="contact-title">
+      <div class="contact-top"><p class="eyebrow">NOS VEMOS EN DISCORD</p><span class="contact-label">COMUNIDAD NORDIC <span aria-hidden="true">↗</span></span></div>
+      <div class="contact-content">
+        <div><h2 id="contact-title">Tu próxima partida<br>empieza acá.</h2><p>Entra a nuestro Discord para conocer el browser, consultar los planes y precios, y recibir ayuda para empezar.</p></div>
+        <a class="button primary contact-button" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Info y precios en Discord <span aria-hidden="true">↗</span></a>
       </div>
+      <p class="contact-note">Consulta en Discord la versión disponible, las funciones incluidas y cómo obtener acceso.</p>
     </section>
   </main>
 
-  <footer class="shell">
-    <span>&copy; 2026 Nordic Gaming Browser</span>
-    <span>Built for players &middot; <a href="#">Volver arriba &uarr;</a></span>
+  <footer class="footer shell">
+    <div class="footer-brand"><img src="assets/favicon.png" width="28" height="28" alt=""><span>© 2026 Nordic Gaming Browser</span></div>
+    <div class="footer-links"><a href="https://github.com/noordic/nordic-gaming-browser" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Discord <span aria-hidden="true">↗</span></a><a href="#inicio">Volver arriba ↑</a></div>
   </footer>
 </body>
 </html>
