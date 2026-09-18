@@ -1,0 +1,9 @@
+# Publish only the public website. Keep Git history and deployment files private.
+*
+!index.html
+!styles.css
+!assets/
+!assets/favicon.png
+!assets/nordic-home.png
+!assets/nordic-logo.png
+!assets/nordic-settings.png
