@@ -1,0 +1,5 @@
+# Local visual checks; excluded from the public site.
+check-layout.cjs
+preview-*.png
+*-desktop.png
+*-mobile.png

@@ -1,0 +1,122 @@
+/* Nordic Gaming Browser — September 2026 */
+.header-wrap { background: #030910; border-bottom: 1px solid #172332; }
+.header { min-height: 108px; border: 0; gap: 24px; }
+.brand { font-size: 1.6rem; letter-spacing: .015em; }
+.brand img { width: 60px; height: 60px; }
+.brand-subtitle { color: var(--blue); font-size: .68rem; letter-spacing: .18em; }
+nav { gap: 25px; }
+nav a { font-size: .92rem; padding-block: 42px; position: relative; }
+nav .active { color: var(--blue); }
+nav .active::after { content: ""; position: absolute; bottom: 18px; left: 0; right: 0; height: 3px; border-radius: 3px; background: var(--blue); }
+.button { border-radius: 5px; padding-inline: 28px; font-size: 1rem; font-weight: 600; min-height: 56px; }
+.button.primary { background: #0075ef; color: white; border: 1px solid #128cff; box-shadow: 0 8px 30px #0066ff15; }
+.button.primary:hover { background: #0064cc; }
+.button.secondary { border: 1px solid #45566a; background: #040b13a8; color: white; }
+.button.secondary:hover { background: #122437; border-color: var(--blue); }
+.header-discord { font-size: .9rem; min-height: 46px; padding: 12px 21px; white-space: nowrap; }
+.hero-stage { overflow: hidden; position: relative; background: radial-gradient(ellipse at 79% 42%, #00376540, transparent 46%), #030910; }
+.hero-stage::before { content: ""; position: absolute; width: 64%; height: 115%; right: -7%; top: -8%; transform: skewY(-38deg); background: repeating-linear-gradient(0deg, transparent 0 81px, #087dd523 82px, transparent 83px 132px), linear-gradient(0deg, transparent 36%, #006bd91f 39%, transparent 40% 62%, #0075ff1a 65%, transparent 66%); pointer-events: none; mask-image: linear-gradient(90deg, transparent, black 30%, black 80%, transparent); }
+.hero { grid-template-columns: 1.12fr 1fr; gap: 36px; min-height: 710px; padding-block: 68px 96px; }
+.hero::before { display: none; }
+.hero-copy { min-width: 0; }
+h1 { font-size: clamp(2.8rem, 3.85vw, 3.75rem); letter-spacing: -.045em; line-height: 1.14; margin: 24px 0; font-weight: 700; }
+h1 > span { color: #078cff; }
+.lead { max-width: 610px; color: #bfcbd9; font-size: 1.08rem; line-height: 1.85; }
+.hero-benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 530px; margin-top: 30px; }
+.hero-benefits > div { display: grid; justify-items: center; gap: 11px; text-align: center; }
+.hero-benefits svg { width: 35px; height: 35px; fill: none; stroke: #089cff; stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.hero-benefits span { color: #c2ccda; font-size: .82rem; line-height: 1.6; }
+.actions { margin-top: 34px; gap: 18px; }
+.platform { font-size: .72rem; color: #8f9eb2; margin-top: 20px; }
+.hero-brand { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.brand-aura { position: relative; width: min(370px, 80%); }
+.brand-aura::before { content: ""; position: absolute; inset: 6%; border-radius: 50%; box-shadow: 0 0 80px #0075ff40; }
+.brand-aura img { position: relative; width: 100%; filter: drop-shadow(0 0 15px #007aff30); }
+.hero-wordmark { font-size: clamp(3rem, 5.1vw, 4.7rem); font-weight: 700; letter-spacing: .17em; padding-left: .17em; line-height: 1.05; margin-top: 20px; }
+.hero-wordmark span { display: block; font-size: .25em; color: #009dff; font-weight: 500; letter-spacing: .36em; margin-top: 14px; }
+.brand-tagline { color: #bfcbd9; font-size: .9rem; line-height: 1.9; letter-spacing: .07em; margin-top: 28px; }
+.hero-scroll { position: absolute; bottom: 22px; left: calc(50% - 22px); width: 44px; height: 44px; display: grid; place-items: center; font-size: 2.2rem; color: #b8c4d4; }
+h2 > span { color: var(--blue); }
+.games-section { padding-block: 78px; }
+.game-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.game-list span { padding: 13px 20px; border: 1px solid #243a50; border-radius: 5px; color: #cfdfed; font-size: .92rem; background: linear-gradient(120deg, #11263c, #09131f); }
+.game-list span:first-child { color: #62c5ff; border-color: #136fad; }
+.games-preview { overflow: hidden; border: 1px solid #243a50; border-radius: 10px; background: #0a1420; }
+.games-preview img { width: 100%; }
+.games-preview figcaption { border-top: 1px solid #243a50; padding: 14px 20px; }
+.purchase-section { padding-top: 32px; }
+.feature-grid { border: 0; gap: 16px; }
+.feature { border: 1px solid #203348; border-radius: 10px; background: linear-gradient(145deg, #0d1b2b, #080f19); }
+.feature h3 { margin-top: 28px; }
+.showcase { padding-top: 0; }
+.performance-layout { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 65px; }
+.performance-copy h3 { font-size: 2rem; line-height: 1.2; margin: 18px 0; letter-spacing: -.035em; }
+.performance-copy p { color: var(--muted); line-height: 1.8; margin-top: 16px; }
+.performance-copy .text-link { color: var(--blue); margin-top: 12px; }
+.levels-band { background: radial-gradient(ellipse at 75% 50%, #11395860, transparent 54%), #08131f; border-block: 1px solid #203348; padding-block: 80px; }
+.levels-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.levels-copy .settings-lead { max-width: 540px; }
+.levels-preview { justify-self: center; max-width: 360px; min-width: 0; overflow: hidden; border: 1px solid #304a61; border-radius: 14px; box-shadow: 0 25px 80px #0005; background: #0a111b; }
+.levels-preview img { width: 100%; }
+.levels-preview figcaption { padding: 16px 20px; border-top: 1px solid #243a50; font-size: .75rem; }
+.personalization { background: #060f19; }
+.payment-label { display: inline-flex; align-items: center; gap: 12px; margin-top: 20px; padding: 9px 14px; border: 1px solid #426281; border-radius: 5px; font-size: .85rem; color: #d3dfed; }
+.payment-label strong { color: white; font-size: 1.05rem; }
+.plan-context .eyebrow { margin-bottom: 15px; }
+.plan-card { border-color: #087ed0; box-shadow: 0 0 60px #0075ff0e; }
+.policy-section h2 { font-size: clamp(2rem, 3vw, 3rem); }
+@media (min-width: 1600px) { .hero { min-height: 760px; padding-block: 85px 100px; } }
+@media (max-width: 1150px) {
+  .header { flex-wrap: wrap; justify-content: space-between; padding-block: 20px 0; gap: 8px 25px; }
+  .header nav { order: 3; width: 100%; justify-content: center; gap: 34px; }
+  .header nav a { padding-block: 20px; }
+  nav .active::after { bottom: 5px; }
+  .hero { gap: 24px; min-height: 640px; }
+  .hero-benefits { gap: 12px; }
+  .hero .button { padding-inline: 22px; }
+  .performance-layout { gap: 35px; }
+  .levels-layout { gap: 40px; }
+}
+@media (max-width: 850px) {
+  .header .nav-section { display: block; }
+  .hero { grid-template-columns: 1fr; gap: 48px; padding-block: 52px 80px; }
+  .hero-copy { max-width: 640px; }
+  h1 { font-size: clamp(2.8rem, 7vw, 4rem); }
+  .hero-brand { padding-bottom: 15px; }
+  .brand-aura { width: 270px; }
+  .hero-wordmark { font-size: 3.6rem; }
+  .hero-stage::before { width: 100%; height: 60%; top: auto; bottom: 0; }
+  .performance-layout { grid-template-columns: 1fr; }
+  .performance-copy { max-width: 620px; }
+  .levels-layout { grid-template-columns: 1fr; }
+  .levels-preview { width: 100%; }
+}
+@media (max-width: 560px) {
+  .header { gap: 15px 8px; }
+  .brand { font-size: 1.25rem; gap: 9px; }
+  .brand img { width: 42px; height: 42px; }
+  .brand-subtitle { font-size: .55rem; }
+  .header-discord { min-height: 42px; font-size: .75rem; padding: 10px 12px; gap: 8px; }
+  .header nav { gap: 0; justify-content: space-between; }
+  .header nav a { font-size: .76rem; padding-block: 12px 17px; }
+  .hero { padding-top: 40px; }
+  h1 { font-size: clamp(2.25rem, 9.5vw, 3.2rem); }
+  .lead { font-size: 1rem; }
+  .hero-benefits { gap: 8px; margin-top: 26px; }
+  .hero-benefits span { font-size: .7rem; }
+  .hero-benefits svg { width: 30px; height: 30px; }
+  .actions { flex-direction: row; align-items: stretch; gap: 12px; }
+  .hero .actions .button { padding: 13px 16px; font-size: .88rem; gap: 10px; min-height: 50px; }
+  .platform { font-size: .68rem; }
+  .brand-aura { width: 245px; }
+  .hero-wordmark { font-size: 3.2rem; }
+  .brand-tagline { font-size: .76rem; letter-spacing: .035em; }
+  .games-section { padding-block: 55px; }
+  .game-list { gap: 8px; margin-bottom: 24px; }
+  .game-list span { font-size: .8rem; padding: 10px 12px; }
+  .games-preview figcaption { font-size: .7rem; padding: 12px; }
+  .levels-band { padding-block: 60px; }
+  h2 { font-size: 2.35rem; }
+  .showcase { padding-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }

@@ -1,27 +1,27 @@
 # Nordic Gaming Browser
 
-Sitio público: https://noordic.github.io/nordic-gaming-browser/
+Sitio público: https://nordicbrowser.com/
 
 ## Contenido
 
 - `index.html`: producto, funciones, plan mensual, entrega y activación, reembolsos, contacto y privacidad.
-- `styles.css`: diseño adaptable y navegación accesible.
+- `styles.css` y `redesign.css`: diseño adaptable y navegación accesible.
 - `assets/`: logo y capturas reales de Nordic.
 - Sitio estático sin dependencias ni compilación.
 
-## Datos utilizados (18 de septiembre de 2026)
+## Datos utilizados (23 de septiembre de 2026)
 
 - Soporte: `noordicdev@gmail.com`, tomado del comando `access.support` del navegador y su documentación.
 - Acceso ligado a Discord: documentación de integración y cliente Commercial.
-- Mensual de $2.990 CLP, un equipo, una sesión y sin renovación automática: documentación del catálogo y piloto mensual reciente. Los documentos antiguos aún enumeran un semanal y precios USD; no se publican como ofertas vigentes.
+- Mensual de $2.999 CLP, actualizado por indicación del titular. Se mantienen las condiciones publicadas de un equipo, una sesión y sin renovación automática.
 - Hay una diferencia documental entre mes calendario y 30 días. El sitio describe un periodo mensual y exige confirmar fechas exactas antes del pago; conviene unificar esta definición en el producto.
-- No se anuncia una pasarela activa: Webpay está documentado como piloto de integración y dLocal Go está pendiente de habilitación. La contratación se coordina por soporte.
+- Por indicación del titular, el sitio informa pagos a través de Webpay e inicio de sesión con Discord y compra de suscripción dentro de Nordic Gaming Browser. El sitio no implementa login ni checkout.
 - No se publica una versión o enlace de instalador no verificado. El enlace oficial se entrega por soporte.
 
 ## Condiciones comerciales iniciales
 
 Por autorización del titular para definir condiciones sencillas donde faltaban:
-- Entrega/habilitación manual: hasta 2 días hábiles tras verificar el pago.
+- El instalador se obtiene por Discord; el usuario inicia sesión y compra desde Nordic. Se reemplazó la descripción anterior de contratación manual por este flujo, indicado por el titular.
 - Devolución íntegra solicitada dentro de 10 días corridos, incluso con acceso activado.
 - Casos de no entrega, cobros duplicados o problemas no solucionados se atienden también después.
 - Respuesta a reembolsos: hasta 2 días hábiles. Inicio de devolución: hasta 5 días hábiles tras aprobación; el abono depende del proveedor.
@@ -53,4 +53,10 @@ Documentación: https://formsubmit.co/documentation y https://formsubmit.co/help
 ## Cloudflare Pages
 
 Configuración: rama `main`, framework `None`, comando `exit 0`, salida `.`.
-Al migrar, actualizar `canonical`, `og:url` y el campo `_url` del formulario al dominio real, y verificar FormSubmit con el nuevo origen. El dominio .com se contrata por separado.
+`canonical`, `og:url` y el campo `_url` del formulario apuntan a `https://nordicbrowser.com/`. `.assetsignore` incluye las hojas de estilo y todas las imágenes públicas utilizadas.
+
+## Diseño y capturas
+
+El inicio sigue la referencia suministrada por el titular: marca Nordic Gaming Browser, fondo oscuro, azul eléctrico, emblema original y CTA a Discord. Se conserva el lema solicitado: “The first optimized gaming browser. Built for performance, built to win.”
+
+Las capturas de juegos, rendimiento, resolución y niveles fueron suministradas por el titular para su publicación. El panel de niveles se presenta como ejemplo; los datos visibles no representan la cuenta del visitante. Se conservan las funciones de HaxBall, contacto, reembolsos y privacidad. No se prometen mejoras cuantificadas de FPS ni reducción del ping.
