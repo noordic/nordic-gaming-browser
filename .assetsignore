@@ -1,6 +1,7 @@
 # Publish only the public website. Keep Git history and deployment files private.
 *
 !index.html
+!i18n.js
 !styles.css
 !redesign.css
 !assets/

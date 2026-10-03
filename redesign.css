@@ -120,3 +120,13 @@ h2 > span { color: var(--blue); }
   .showcase { padding-top: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+
+/* Language selector remains visible above navigation at every screen size. */
+.language-bar { display: flex; justify-content: flex-end; align-items: center; gap: 14px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.language-label { font-size: .75rem; color: var(--muted); }
+.language-options { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: #09131f; }
+.language-option { min-height: 36px; padding: 7px 12px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--muted); font: inherit; font-size: .8125rem; cursor: pointer; }
+.language-option:hover { color: var(--text); background: #15263a; }
+.language-option[aria-pressed="true"] { background: #0075ef; border-color: #128cff; color: #fff; }
+.language-option:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@media (max-width: 560px) { .language-bar { justify-content: space-between; gap: 8px; } .language-option { padding-inline: 9px; font-size: .75rem; } }

@@ -5,6 +5,7 @@ Sitio público: https://nordicbrowser.com/
 ## Contenido
 
 - `index.html`: producto, funciones, plan mensual, entrega y activación, reembolsos, contacto y privacidad.
+- `i18n.js`: traducciones completas de la página principal en inglés, español y portugués; selector superior mediante botones accesibles. Inglés por defecto en cada carga, sin detectar el idioma del navegador. Conserva precios, enlaces y datos introducidos en el formulario al cambiar de idioma.
 - `styles.css` y `redesign.css`: diseño adaptable y navegación accesible.
 - `assets/`: logo y capturas reales de Nordic.
 - Sitio estático sin dependencias ni compilación.

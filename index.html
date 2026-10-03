@@ -1,40 +1,49 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080d14">
-  <meta name="description" content="Nordic Gaming Browser. Tu navegador optimizado para juegos web. Niveles, personalización y herramientas de rendimiento. Plan mensual con pagos por Webpay o PayPal y login con Discord dentro del navegador.">
-  <meta property="og:title" content="Nordic Gaming Browser — Optimizado para ganar.">
-  <meta property="og:description" content="The first optimized gaming browser. Built for performance, built to win. Juegos web, rendimiento y personalización en un solo navegador.">
+  <meta name="description" content="Nordic Gaming Browser. Your browser optimized for web games. Levels, customization and performance tools. Monthly plan with Webpay or PayPal payments and Discord sign-in inside the browser.">
+  <meta property="og:title" content="Nordic Gaming Browser — Optimized to win.">
+  <meta property="og:description" content="The first optimized gaming browser. Built for performance, built to win. Web games, performance and customization in one browser.">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_CL">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://nordicbrowser.com/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Nordic Gaming Browser — Optimizado para ganar.">
-  <meta name="twitter:description" content="Tu navegador optimizado para ganar. Juegos web, niveles y rendimiento. Plan mensual con Webpay o PayPal.">
+  <meta name="twitter:title" content="Nordic Gaming Browser — Optimized to win.">
+  <meta name="twitter:description" content="Your browser optimized to win. Web games, levels and performance. Monthly plan with Webpay or PayPal.">
   <link rel="canonical" href="https://nordicbrowser.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css?v=20261002-paypal">
-  <link rel="stylesheet" href="redesign.css?v=20260923">
-  <title>Nordic Gaming Browser — Optimizado para ganar.</title>
+  <link rel="stylesheet" href="redesign.css?v=20261002-languages">
+  <script src="i18n.js?v=20261002" defer></script>
+  <title>Nordic Gaming Browser — Optimized to win.</title>
 </head>
 <body id="inicio">
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <a class="skip-link" href="#contenido">Skip to content</a>
   <div class="header-wrap">
+    <div class="language-bar shell">
+      <span class="language-label">Language</span>
+      <div class="language-options" role="group" aria-label="Change language">
+        <button class="language-option" type="button" disabled data-language="en" aria-pressed="true" lang="en">English</button>
+        <button class="language-option" type="button" disabled data-language="es" aria-pressed="false" lang="es">Español</button>
+        <button class="language-option" type="button" disabled data-language="pt" aria-pressed="false" lang="pt">Português</button>
+      </div>
+    </div>
   <header class="header shell">
-    <a class="brand" href="#inicio" aria-label="Nordic Gaming Browser, inicio">
+    <a class="brand" href="#inicio" aria-label="Nordic Gaming Browser, home">
       <img src="assets/nordic-logo.png" width="48" height="48" alt="">
       <span>NORDIC<span class="brand-subtitle">GAMING BROWSER</span></span>
     </a>
-    <nav aria-label="Navegación principal">
-      <a class="nav-section active" href="#inicio">Inicio</a>
-      <a class="nav-section" href="#funciones">Funciones</a>
-      <a class="nav-section" href="#juegos">Juegos</a>
-      <a class="nav-section" href="#planes">Suscripción</a>
-      <a class="nav-section" href="#contacto">Soporte</a>
+    <nav aria-label="Main navigation">
+      <a class="nav-section active" href="#inicio">Home</a>
+      <a class="nav-section" href="#funciones">Features</a>
+      <a class="nav-section" href="#juegos">Games</a>
+      <a class="nav-section" href="#planes">Subscription</a>
+      <a class="nav-section" href="#contacto">Support</a>
     </nav>
-    <a class="button primary header-discord" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Ir a Discord <span aria-hidden="true">↗</span></a>
+    <a class="button primary header-discord" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Go to Discord <span aria-hidden="true">↗</span></a>
   </header>
   </div>
 
@@ -43,147 +52,147 @@
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="signal" aria-hidden="true"></span> NORDIC GAMING BROWSER</p>
-        <h1 id="hero-title">Tu navegador<br><span>optimizado para ganar.</span></h1>
-        <p class="lead">Más juegos. Más control. Nordic Gaming Browser reúne ajustes de rendimiento, personalización y herramientas exclusivas para llevar tu experiencia de juego al siguiente nivel.</p>
-        <div class="hero-benefits" aria-label="Ventajas de Nordic">
-          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m19 2-14 17h10l-2 11 14-18H17z"/></svg><span>Rendimiento<br>optimizado</span></div>
-          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26a14 14 0 1 1 22 0M16 4v4M5 14l4 2m18-2-4 2M16 20l7-9"/><circle cx="16" cy="20" r="3"/></svg><span>Control de<br>latencia</span></div>
-          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 4v9c0 7-11 13-11 13S5 23 5 16V7z"/></svg><span>DNS<br>cifrado</span></div>
-          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 4v24M16 4v24M25 4v24"/><path d="M3 11h8M12 22h8M21 10h8" stroke-width="5"/></svg><span>Herramientas<br>exclusivas</span></div>
+        <h1 id="hero-title">Your browser<br><span>optimized to win.</span></h1>
+        <p class="lead">More games. More control. Nordic Gaming Browser brings together performance settings, customization and exclusive tools to take your gaming experience to the next level.</p>
+        <div class="hero-benefits" aria-label="Nordic benefits">
+          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m19 2-14 17h10l-2 11 14-18H17z"/></svg><span>Optimized<br>performance</span></div>
+          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26a14 14 0 1 1 22 0M16 4v4M5 14l4 2m18-2-4 2M16 20l7-9"/><circle cx="16" cy="20" r="3"/></svg><span>Latency<br>control</span></div>
+          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 4v9c0 7-11 13-11 13S5 23 5 16V7z"/></svg><span>DNS<br>encrypted</span></div>
+          <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 4v24M16 4v24M25 4v24"/><path d="M3 11h8M12 22h8M21 10h8" stroke-width="5"/></svg><span>Exclusive<br>tools</span></div>
         </div>
         <div class="actions">
-          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer"><svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.7 5.2A18 18 0 0 0 15.5 4l-.5 1a15 15 0 0 0-6 0l-.5-1a18 18 0 0 0-4.2 1.2C1.7 9 1 12.7 1.4 16.3a17 17 0 0 0 5.2 2.6l1.1-1.8-1.7-.8.4-.3c3.6 1.7 7.6 1.7 11.2 0l.4.3-1.7.8 1.1 1.8a17 17 0 0 0 5.2-2.6c.5-4.2-.9-7.9-2.9-11.1ZM8.5 14.4c-1 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.7 2-1.7 2Zm7 0c-1 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.7 2-1.7 2Z"/></svg>Ir a Discord</a>
-          <a class="button secondary" href="#funciones">Ver funciones <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer"><svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.7 5.2A18 18 0 0 0 15.5 4l-.5 1a15 15 0 0 0-6 0l-.5-1a18 18 0 0 0-4.2 1.2C1.7 9 1 12.7 1.4 16.3a17 17 0 0 0 5.2 2.6l1.1-1.8-1.7-.8.4-.3c3.6 1.7 7.6 1.7 11.2 0l.4.3-1.7.8 1.1 1.8a17 17 0 0 0 5.2-2.6c.5-4.2-.9-7.9-2.9-11.1ZM8.5 14.4c-1 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.7 2-1.7 2Zm7 0c-1 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.7 2-1.7 2Z"/></svg>Go to Discord</a>
+          <a class="button secondary" href="#funciones">Explore features <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="platform">Para Windows <span aria-hidden="true">·</span> Inicio de sesión con Discord dentro de Nordic</p>
+        <p class="platform">For Windows <span aria-hidden="true">·</span> Sign in with Discord inside Nordic</p>
       </div>
       <div class="hero-brand">
-        <div class="brand-aura"><img src="assets/nordic-emblem.png" width="1254" height="1254" alt="Emblema de Nordic: un dragón azul y plateado sobre la letra N." fetchpriority="high"></div>
+        <div class="brand-aura"><img src="assets/nordic-emblem.png" width="1254" height="1254" alt="Nordic emblem: a blue and silver dragon over the letter N." fetchpriority="high"></div>
         <p class="hero-wordmark">NORDIC<span>GAMING BROWSER</span></p>
         <p class="brand-tagline" lang="en">The first optimized gaming browser.<br>Built for performance, built to win.</p>
       </div>
-      <a class="hero-scroll" href="#juegos" aria-label="Explorar los juegos y funciones">⌄</a>
+      <a class="hero-scroll" href="#juegos" aria-label="Explore games and features">⌄</a>
     </section>
     </div>
 
     <section class="section shell games-section" id="juegos" aria-labelledby="games-title">
       <div class="section-heading">
-        <div><p class="eyebrow">MUCHOS JUEGOS. UN SOLO NAVEGADOR.</p><h2 id="games-title">Tu siguiente partida.<br><span>Siempre a mano.</span></h2></div>
-        <p>De un partido en HaxBall a la estrategia de OGame. Disfruta tus juegos web con accesos directos y ajustes para optimizar tu experiencia.</p>
+        <div><p class="eyebrow">MANY GAMES. ONE BROWSER.</p><h2 id="games-title">Your next match.<br><span>Always within reach.</span></h2></div>
+        <p>From a match in HaxBall to strategy in OGame. Enjoy your web games with shortcuts and settings to optimize your experience.</p>
       </div>
-      <div class="game-list" aria-label="Juegos web"><span>HaxBall</span><span>Krunker.io</span><span>Agar.io</span><span>Slither.io</span><span>OGame</span><span>Travian</span><span>Hero Wars</span><span>Vikings: War of Clans</span></div>
+      <div class="game-list" aria-label="Web games"><span>HaxBall</span><span>Krunker.io</span><span>Agar.io</span><span>Slither.io</span><span>OGame</span><span>Travian</span><span>Hero Wars</span><span>Vikings: War of Clans</span></div>
       <figure class="games-preview">
-        <a class="screenshot-link" href="assets/nordic-games.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar captura de los accesos a juegos"><img src="assets/nordic-games.png" width="1194" height="99" loading="lazy" alt="Barra de Nordic Gaming Browser con accesos a HaxBall, Krunker.io, Agar.io, Slither.io, OGame, Travian, Hero Wars y Vikings: War of Clans."></a>
-        <figcaption>Tus juegos, a un clic. Captura real de Nordic Gaming Browser.</figcaption>
+        <a class="screenshot-link" href="assets/nordic-games.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the game shortcuts screenshot"><img src="assets/nordic-games.png" width="1194" height="99" loading="lazy" alt="Nordic Gaming Browser bar with shortcuts to HaxBall, Krunker.io, Agar.io, Slither.io, OGame, Travian, Hero Wars and Vikings: War of Clans."></a>
+        <figcaption>Your games, one click away. Actual Nordic Gaming Browser screenshot.</figcaption>
       </figure>
-      <p class="section-note">Las herramientas específicas de HaxBall se aplican a ese juego. Cada título mantiene sus propios requisitos, disponibilidad y condiciones.</p>
+      <p class="section-note">HaxBall-specific tools apply to that game. Each title has its own requirements, availability and terms.</p>
     </section>
 
     <section class="section shell purchase-section" id="producto" aria-labelledby="product-title">
       <div class="section-heading">
-        <div><p class="eyebrow">CONOCE EL PRODUCTO</p><h2 id="product-title">Qué es Nordic.<br>Qué compras.</h2></div>
-        <p>Nordic Gaming Browser es un navegador para Windows basado en Chromium, diseñado para jugar juegos web con rendimiento optimizado, personalización y herramientas adicionales para HaxBall.</p>
+        <div><p class="eyebrow">MEET THE PRODUCT</p><h2 id="product-title">What Nordic is.<br>What you buy.</h2></div>
+        <p>Nordic Gaming Browser is a Chromium-based browser for Windows, designed for web games with optimized performance, customization and additional tools for HaxBall.</p>
       </div>
       <div class="purchase-grid">
         <article class="purchase-card">
-          <h3>Acceso al navegador</h3>
-          <p>Ofrecemos acceso de pago a Nordic Gaming Browser y a sus funciones incluidas: ajustes del navegador y Windows, temas, resolución, niveles de cuenta y herramientas para HaxBall como controles de FPS, teclado, chat y análisis de repeticiones.</p>
-          <p>Puedes revisar cada grupo de funciones en <a href="#funciones">la descripción del producto</a>.</p>
+          <h3>Browser access</h3>
+          <p>We offer paid access to Nordic Gaming Browser and its included features: browser and Windows settings, themes, resolution, account levels and HaxBall tools such as FPS, keyboard and chat controls and replay analysis.</p>
+          <p>You can review each group of features in <a href="#funciones">the product description</a>.</p>
         </article>
         <article class="purchase-card">
-          <h3>Una licencia de uso personal</h3>
-          <p>Compras acceso temporal al navegador, vinculado a tu cuenta de Discord. El plan mensual permite un equipo y una sesión simultánea.</p>
-          <p>Necesitas Windows de 64 bits, una cuenta de Discord y conexión a Internet para iniciar sesión y validar el acceso. Consulta la compatibilidad de tu equipo antes de pagar.</p>
-          <a class="text-link" href="#planes">Precio y condiciones <span aria-hidden="true">↓</span></a>
+          <h3>A personal-use license</h3>
+          <p>You buy temporary access to the browser, linked to your Discord account. The monthly plan allows one device and one simultaneous session.</p>
+          <p>You need 64-bit Windows, a Discord account and an Internet connection to sign in and validate access. Check your device's compatibility before paying.</p>
+          <a class="text-link" href="#planes">Price and terms <span aria-hidden="true">↓</span></a>
         </article>
       </div>
-      <p class="section-note">Producto digital para Windows. El rendimiento depende de tu equipo y de la configuración; los ajustes de renderizado no reducen el ping de tu conexión.</p>
+      <p class="section-note">Digital product for Windows. Performance depends on your device and settings; rendering adjustments do not reduce your connection's ping.</p>
     </section>
 
     <section class="section shell" id="funciones" aria-labelledby="features-title">
       <div class="section-heading">
-        <div><p class="eyebrow">EL JUEGO, BAJO TU CONTROL</p><h2 id="features-title">Los ajustes que<br>hacen tu partida.</h2></div>
-        <p>Configura el navegador a tu medida y aprovecha las herramientas dedicadas a HaxBall: desde el límite de FPS hasta el análisis de tus partidas.</p>
+        <div><p class="eyebrow">THE GAME, UNDER YOUR CONTROL</p><h2 id="features-title">The settings that<br>shape your game.</h2></div>
+        <p>Set up the browser your way and use the dedicated HaxBall tools, from FPS limits to match analysis.</p>
       </div>
       <div class="feature-grid">
         <article class="feature">
-          <span class="feature-index">01 <span>RENDIMIENTO</span></span>
-          <h3>Encuentra tu ritmo.</h3>
-          <p>Elige tu límite de FPS o desactívalo, ajusta la calidad gráfica y selecciona un modo de latencia de renderizado para HaxBall.</p>
-          <span class="feature-detail">FPS · Gráficos · Latencia</span>
+          <span class="feature-index">01 <span>PERFORMANCE</span></span>
+          <h3>Find your rhythm.</h3>
+          <p>Choose your FPS limit or disable it, adjust graphics quality and select a rendering latency mode for HaxBall.</p>
+          <span class="feature-detail">FPS · Graphics · Latency</span>
         </article>
         <article class="feature">
-          <span class="feature-index">02 <span>CONTROLES</span></span>
-          <h3>Afina cada pulsación.</h3>
-          <p>Configura el retraso y la repetición del teclado con Filter Keys. Usa los ajustes predefinidos o establece tus propios valores.</p>
-          <span class="feature-detail">Filter Keys · Ajustes de teclado</span>
+          <span class="feature-index">02 <span>CONTROLS</span></span>
+          <h3>Fine-tune every keystroke.</h3>
+          <p>Configure keyboard delay and repeat with Filter Keys. Use the presets or set your own values.</p>
+          <span class="feature-detail">Filter Keys · Keyboard settings</span>
         </article>
         <article class="feature">
-          <span class="feature-index">03 <span>PERSONALIZACIÓN</span></span>
-          <h3>Hazlo tuyo.</h3>
-          <p>Combina los temas del navegador con las apariencias HTML5, Flash o Nordic de HaxBall. Personaliza avatares, reacciones e imágenes de equipos.</p>
-          <span class="feature-detail">Temas · Avatares · Equipos</span>
+          <span class="feature-index">03 <span>CUSTOMIZATION</span></span>
+          <h3>Make it yours.</h3>
+          <p>Combine browser themes with HaxBall's HTML5, Flash or Nordic appearances. Customize avatars, reactions and team images.</p>
+          <span class="feature-detail">Themes · Avatars · Teams</span>
         </article>
         <article class="feature">
-          <span class="feature-index">04 <span>EN PARTIDA</span></span>
-          <h3>Más a mano.</h3>
-          <p>Accede al selector de emojis, los controles del chat y las herramientas de sala. Ajusta la visibilidad del chat y utiliza las acciones de administración cuando tengas permisos.</p>
-          <span class="feature-detail">Chat · Emojis · Salas</span>
+          <span class="feature-index">04 <span>IN THE MATCH</span></span>
+          <h3>More within reach.</h3>
+          <p>Access the emoji picker, chat controls and room tools. Adjust chat visibility and use administration actions when you have permission.</p>
+          <span class="feature-detail">Chat · Emojis · Rooms</span>
         </article>
         <article class="feature">
-          <span class="feature-index">05 <span>DESPUÉS DEL PARTIDO</span></span>
-          <h3>De la rec al informe.</h3>
-          <p>Analiza repeticiones de HaxBall, revisa estadísticas y prepara un informe con formato para Discord. También puedes guardarlo como texto.</p>
-          <span class="feature-detail">Repeticiones · Estadísticas · Informes</span>
+          <span class="feature-index">05 <span>AFTER THE MATCH</span></span>
+          <h3>From replay to report.</h3>
+          <p>Analyze HaxBall replays, review statistics and prepare a report formatted for Discord. You can also save it as text.</p>
+          <span class="feature-detail">Replays · Statistics · Reports</span>
         </article>
         <article class="feature">
-          <span class="feature-index">06 <span>TU NAVEGADOR</span></span>
-          <h3>Todo en su lugar.</h3>
-          <p>Elige tu página de inicio, organiza tus marcadores y consulta historial y descargas. Guarda y carga tu configuración con archivos .CFG.</p>
-          <span class="feature-detail">Inicio · Marcadores · Configuración</span>
+          <span class="feature-index">06 <span>YOUR BROWSER</span></span>
+          <h3>Everything in its place.</h3>
+          <p>Choose your home page, organize bookmarks and check history and downloads. Save and load your settings with .CFG files.</p>
+          <span class="feature-detail">Home · Bookmarks · Settings</span>
         </article>
       </div>
-      <p class="section-note">El rendimiento depende de tu hardware y configuración. Los modos de latencia ajustan el renderizado del juego; no cambian el ping de tu conexión.</p>
+      <p class="section-note">Performance depends on your hardware and settings. Latency modes adjust game rendering; they do not change your connection's ping.</p>
     </section>
 
 
     <section class="section shell showcase" id="rendimiento" aria-labelledby="performance-title">
-      <div class="section-heading"><div><p class="eyebrow">MENOS DISTRACCIONES. MÁS JUEGO.</p><h2 id="performance-title">El rendimiento<br>en tus manos.</h2></div><p>Ajusta la calidad de la interfaz y la resolución del temporizador de Windows desde el propio navegador.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">FEWER DISTRACTIONS. MORE GAMING.</p><h2 id="performance-title">Performance<br>in your hands.</h2></div><p>Adjust interface quality and the Windows timer resolution from the browser itself.</p></div>
       <div class="performance-layout">
-        <figure class="settings-preview"><div class="preview-heading"><span class="preview-label">RENDIMIENTO Y WINDOWS</span><span>01 / CONTROL</span></div><a class="screenshot-link" href="assets/nordic-performance.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ajustes de rendimiento"><img src="assets/nordic-performance.png" width="832" height="441" loading="lazy" alt="Opciones avanzadas de Nordic: calidad del navegador y resolución del temporizador de Windows."></a><figcaption>Controles reales, accesibles desde las opciones avanzadas.</figcaption></figure>
-        <div class="performance-copy"><span class="feature-index">HECHO PARA TU FORMA DE JUGAR</span><h3>Decide dónde<br>poner el foco.</h3><p>Reduce las animaciones de la interfaz con el modo de calidad baja, sin cambiar el juego, WebGL ni la aceleración por GPU.</p><p>Personaliza el temporizador de Windows mientras Nordic está abierto y encuentra la configuración que mejor se adapte a tu equipo.</p><a class="text-link" href="#personalizacion">Explorar más ajustes <span aria-hidden="true">↓</span></a></div>
+        <figure class="settings-preview"><div class="preview-heading"><span class="preview-label">PERFORMANCE AND WINDOWS</span><span>01 / CONTROL</span></div><a class="screenshot-link" href="assets/nordic-performance.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge performance settings"><img src="assets/nordic-performance.png" width="832" height="441" loading="lazy" alt="Nordic advanced options: browser quality and Windows timer resolution."></a><figcaption>Real controls, accessible from advanced options.</figcaption></figure>
+        <div class="performance-copy"><span class="feature-index">MADE FOR THE WAY YOU PLAY</span><h3>Choose where<br>to focus.</h3><p>Reduce interface animations with low-quality mode, without changing the game, WebGL or GPU acceleration.</p><p>Customize the Windows timer while Nordic is open and find the settings that best suit your device.</p><a class="text-link" href="#personalizacion">Explore more settings <span aria-hidden="true">↓</span></a></div>
       </div>
     </section>
 
     <section class="levels-band" id="niveles" aria-labelledby="levels-title">
       <div class="shell levels-layout">
-        <div class="levels-copy"><p class="eyebrow">CADA PARTIDA CUENTA</p><h2 id="levels-title">Juega. Sube de nivel.<br><span>Hazlo tuyo.</span></h2><p class="settings-lead">Sigue tu progreso en HaxBall desde tu cuenta de Nordic. Consulta tu XP, el siguiente nivel y las recompensas disponibles en un solo lugar.</p><ul class="settings-list"><li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Tu progreso, visible</h3><p>Revisa las partidas completadas y la experiencia que te falta para alcanzar el siguiente nivel.</p></div></li><li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Recompensas para tu cuenta</h3><p>Consulta los premios y reclama los que hayas desbloqueado, incluidos días de suscripción cuando estén disponibles.</p></div></li><li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Premios y personalización</h3><p>Accede a las pestañas de tu cuenta y revisa tus recompensas desde el navegador.</p></div></li></ul></div>
-        <figure class="levels-preview"><a class="screenshot-link" href="assets/nordic-levels.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar panel de niveles"><img src="assets/nordic-levels.png" width="417" height="564" loading="lazy" alt="Panel de niveles: nivel 6, progreso de 100 de 175 XP, partidas completadas y pestañas de premios y personalización."></a><figcaption>Vista de ejemplo del panel de niveles. El progreso y los premios dependen de cada cuenta.</figcaption></figure>
+        <div class="levels-copy"><p class="eyebrow">EVERY MATCH COUNTS</p><h2 id="levels-title">Play. Level up.<br><span>Make it yours.</span></h2><p class="settings-lead">Track your HaxBall progress from your Nordic account. Check your XP, the next level and available rewards in one place.</p><ul class="settings-list"><li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Your progress, visible</h3><p>Review completed matches and the experience you need to reach the next level.</p></div></li><li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Rewards for your account</h3><p>Check rewards and claim those you have unlocked, including subscription days when available.</p></div></li><li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Rewards and customization</h3><p>Access your account tabs and review your rewards from the browser.</p></div></li></ul></div>
+        <figure class="levels-preview"><a class="screenshot-link" href="assets/nordic-levels.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the levels panel"><img src="assets/nordic-levels.png" width="417" height="564" loading="lazy" alt="Levels panel: level 6, progress of 100 out of 175 XP, completed matches and rewards and customization tabs."></a><figcaption>Example view of the levels panel. Progress and rewards depend on each account.</figcaption></figure>
       </div>
     </section>
 
     <section class="personalization" id="personalizacion" aria-labelledby="settings-title">
       <div class="shell settings-layout">
         <div class="settings-copy">
-          <p class="eyebrow">A LA MEDIDA DE TU PANTALLA</p>
-          <h2 id="settings-title">Tu espacio.<br>Tu configuración.</h2>
-          <p class="settings-lead">Ajusta cómo se ve el juego, desde la ventana hasta el último detalle.</p>
+          <p class="eyebrow">TAILORED TO YOUR SCREEN</p>
+          <h2 id="settings-title">Your space.<br>Your settings.</h2>
+          <p class="settings-lead">Adjust how the game looks, from the window to the finest detail.</p>
           <ul class="settings-list">
-            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Resolución y estirado</h3><p>Usa una resolución estándar o activa Estirar para definir una resolución interna personalizada, también en ventana normal.</p></div></li>
-            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Tus preferencias, guardadas</h3><p>Conserva tus ajustes y lleva tu configuración a un archivo .CFG para volver a cargarla cuando la necesites.</p></div></li>
-            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>En tu idioma</h3><p>Interfaz disponible en español, inglés y portugués, con temas que también se aplican al navegador.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Resolution and stretching</h3><p>Use a standard resolution or enable Stretch to set a custom internal resolution, including in a normal window.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>Your preferences, saved</h3><p>Keep your settings and save them to a .CFG file so you can load them again whenever you need.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">↗</span><div><h3>In your language</h3><p>The interface is available in Spanish, English and Portuguese, with themes that also apply to the browser.</p></div></li>
           </ul>
-          <div class="themes" aria-label="Ocho temas del navegador">
+          <div class="themes" aria-label="Eight browser themes">
             <span class="swatch electric" title="Electric Blue"></span><span class="swatch night" title="Dark Night"></span><span class="swatch obsidian" title="Dark Obsidian"></span><span class="swatch gold" title="Golden Frost"></span><span class="swatch pink" title="Fancy Pink"></span><span class="swatch purple" title="Purple Nebula"></span><span class="swatch lava" title="Red Lava"></span><span class="swatch frost" title="White Frost"></span>
-            <span>8 formas de sentirlo tuyo.</span>
+            <span>8 ways to make it yours.</span>
           </div>
         </div>
         <figure class="settings-preview">
-          <div class="preview-heading"><span class="preview-label">OPCIONES AVANZADAS</span><span>02 / AJUSTES</span></div>
-          <a class="screenshot-link" href="assets/nordic-resolution.png" target="_blank" rel="noopener noreferrer" aria-label="Ampliar captura de las opciones avanzadas de Nordic">
-            <img src="assets/nordic-resolution.png" width="728" height="537" loading="lazy" decoding="async" alt="Opciones avanzadas: resolución con Estirar, página principal y proveedor DNS cifrado.">
+          <div class="preview-heading"><span class="preview-label">ADVANCED OPTIONS</span><span>02 / SETTINGS</span></div>
+          <a class="screenshot-link" href="assets/nordic-resolution.png" target="_blank" rel="noopener noreferrer" aria-label="Enlarge the Nordic advanced options screenshot">
+            <img src="assets/nordic-resolution.png" width="728" height="537" loading="lazy" decoding="async" alt="Advanced options: resolution with Stretch, home page and encrypted DNS provider.">
           </a>
-          <figcaption>La resolución personalizada estira el contenido del navegador sin cambiar la resolución de Windows.</figcaption>
+          <figcaption>Custom resolution stretches browser content without changing the Windows resolution.</figcaption>
         </figure>
       </div>
     </section>
@@ -191,136 +200,136 @@
 
     <section class="section shell" id="planes" aria-labelledby="plans-title">
       <div class="section-heading">
-        <div><p class="eyebrow">ACCESO A NORDIC</p><h2 id="plans-title">Tu plan mensual.</h2></div>
-        <p>Inicia sesión con Discord y compra tu suscripción dentro de Nordic Gaming Browser. Puedes pagar con Webpay o PayPal.</p>
+        <div><p class="eyebrow">ACCESS TO NORDIC</p><h2 id="plans-title">Your monthly plan.</h2></div>
+        <p>Sign in with Discord and buy your subscription inside Nordic Gaming Browser. You can pay with Webpay or PayPal.</p>
       </div>
       <div class="plan-layout">
         <article class="plan-card" aria-labelledby="monthly-webpay-title">
-          <p class="eyebrow">PLAN MENSUAL · USO PERSONAL</p>
+          <p class="eyebrow">MONTHLY PLAN · PERSONAL USE</p>
           <h3 id="monthly-webpay-title">Webpay</h3>
-          <p class="price">$2.999 <span>CLP / mes</span></p>
-          <p class="payment-label">Paga con <strong>Webpay</strong></p>
+          <p class="price">$2.999 <span>CLP / month</span></p>
+          <p class="payment-label">Pay with <strong>Webpay</strong></p>
           <ul class="plan-list">
-            <li>Funciones del navegador descritas en esta página.</li>
-            <li>Acceso vinculado a tu cuenta de Discord.</li>
-            <li>Un equipo y una sesión simultánea.</li>
-            <li>Sin renovación automática.</li>
-            <li>Entrega digital, sin costo de envío.</li>
+            <li>Browser features described on this page.</li>
+            <li>Access linked to your Discord account.</li>
+            <li>One device and one simultaneous session.</li>
+            <li>No automatic renewal.</li>
+            <li>Digital delivery, with no shipping costs.</li>
           </ul>
-          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Ir a Discord <span aria-hidden="true">↗</span></a>
-          <p class="small-copy">Pago en pesos chilenos. La compra se realiza dentro de Nordic Gaming Browser.</p>
+          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Go to Discord <span aria-hidden="true">↗</span></a>
+          <p class="small-copy">Payment in Chilean pesos. Purchase inside Nordic Gaming Browser.</p>
         </article>
         <article class="plan-card" aria-labelledby="monthly-paypal-title">
-          <p class="eyebrow">PLAN MENSUAL · USO PERSONAL</p>
+          <p class="eyebrow">MONTHLY PLAN · PERSONAL USE</p>
           <h3 id="monthly-paypal-title">PayPal</h3>
-          <p class="price">$3.99 <span>USD / mes</span></p>
-          <p class="payment-label">Paga con <strong>PayPal</strong></p>
+          <p class="price">$3.99 <span>USD / month</span></p>
+          <p class="payment-label">Pay with <strong>PayPal</strong></p>
           <ul class="plan-list">
-            <li>Funciones del navegador descritas en esta página.</li>
-            <li>Acceso vinculado a tu cuenta de Discord.</li>
-            <li>Un equipo y una sesión simultánea.</li>
-            <li>Sin renovación automática.</li>
-            <li>Entrega digital, sin costo de envío.</li>
+            <li>Browser features described on this page.</li>
+            <li>Access linked to your Discord account.</li>
+            <li>One device and one simultaneous session.</li>
+            <li>No automatic renewal.</li>
+            <li>Digital delivery, with no shipping costs.</li>
           </ul>
-          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Ir a Discord <span aria-hidden="true">↗</span></a>
-          <p class="small-copy">Pago en dólares estadounidenses. La compra se realiza dentro de Nordic Gaming Browser.</p>
+          <a class="button primary" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Go to Discord <span aria-hidden="true">↗</span></a>
+          <p class="small-copy">Payment in US dollars. Purchase inside Nordic Gaming Browser.</p>
         </article>
       </div>
       <div class="plan-context">
-        <p class="eyebrow">TODO DESDE NORDIC</p><h3>Tu cuenta y tu suscripción,<br>dentro del navegador.</h3>
-        <p>Abre Nordic Gaming Browser e inicia sesión con tu cuenta de Discord. Desde el navegador puedes comprar tu suscripción y consultar tu acceso.</p>
-        <p>Selecciona el plan dentro de Nordic, elige Webpay o PayPal y continúa al pago. Revisa el importe total, la moneda y las fechas de vigencia antes de pagar. Esta web presenta el producto y te conecta con nuestra comunidad y soporte.</p>
-        <p>Al vencer el periodo, necesitas renovar el acceso para continuar. No se realizan cargos automáticos.</p>
-        <div class="info-links"><a href="#entrega">Cómo recibes tu acceso ↓</a><a href="#reembolsos">Política de reembolsos ↓</a><a href="#contacto">Hablar con soporte ↓</a></div>
+        <p class="eyebrow">EVERYTHING INSIDE NORDIC</p><h3>Your account and subscription,<br>inside the browser.</h3>
+        <p>Open Nordic Gaming Browser and sign in with your Discord account. You can buy your subscription and check your access from the browser.</p>
+        <p>Select your plan inside Nordic, choose Webpay or PayPal and continue to payment. Review the total amount, currency and access dates before paying. This website presents the product and connects you with our community and support.</p>
+        <p>When the period ends, you need to renew your access to continue. There are no automatic charges.</p>
+        <div class="info-links"><a href="#entrega">How you receive access ↓</a><a href="#reembolsos">Refund policy ↓</a><a href="#contacto">Talk to support ↓</a></div>
       </div>
     </section>
 
     <section class="service-band" id="entrega" aria-labelledby="delivery-title">
       <div class="shell">
         <div class="section-heading">
-          <div><p class="eyebrow">ENTREGA DIGITAL</p><h2 id="delivery-title">De la compra<br>a tu primera partida.</h2></div>
-          <p>Empieza en nuestra comunidad. El inicio de sesión con Discord y la compra de la suscripción se realizan dentro de Nordic Gaming Browser.</p>
+          <div><p class="eyebrow">DIGITAL DELIVERY</p><h2 id="delivery-title">From purchase<br>to your first match.</h2></div>
+          <p>Start in our community. Discord sign-in and subscription purchases take place inside Nordic Gaming Browser.</p>
         </div>
         <ol class="delivery-steps">
-          <li><span class="step-number" aria-hidden="true">01</span><h3>Consigue Nordic</h3><p>Entra a nuestro Discord para obtener el enlace oficial y las indicaciones de instalación para Windows.</p></li>
-          <li><span class="step-number" aria-hidden="true">02</span><h3>Inicia sesión con Discord</h3><p>Abre Nordic Gaming Browser e inicia sesión con tu cuenta de Discord desde el navegador. Tu acceso queda vinculado a esa cuenta.</p></li>
-          <li><span class="step-number" aria-hidden="true">03</span><h3>Compra dentro de Nordic</h3><p>Elige la suscripción mensual desde el navegador y completa el pago con Webpay ($2.999 CLP) o PayPal ($3.99 USD). Revisa el importe antes de confirmar el pago. Nordic comprueba tu suscripción para habilitar el acceso.</p></li>
+          <li><span class="step-number" aria-hidden="true">01</span><h3>Get Nordic</h3><p>Join our Discord to get the official link and installation instructions for Windows.</p></li>
+          <li><span class="step-number" aria-hidden="true">02</span><h3>Sign in with Discord</h3><p>Open Nordic Gaming Browser and sign in with your Discord account from the browser. Your access is linked to that account.</p></li>
+          <li><span class="step-number" aria-hidden="true">03</span><h3>Buy inside Nordic</h3><p>Choose the monthly subscription from the browser and pay with Webpay ($2.999 CLP) or PayPal ($3.99 USD). Review the amount before confirming payment. Nordic checks your subscription to enable access.</p></li>
         </ol>
-        <p class="section-note">Si necesitas ayuda con el instalador, tu suscripción no aparece o necesitas cambiar de equipo, escribe a <a href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>. Los días hábiles son de lunes a viernes, excluidos festivos en Chile. Si no podemos entregar el acceso, devolvemos el pago.</p>
+        <p class="section-note">If you need help with the installer, your subscription is missing or you need to change devices, write to <a href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>. Business days are Monday to Friday, excluding public holidays in Chile. If we cannot deliver access, we refund your payment.</p>
       </div>
     </section>
 
     <section class="section shell policy-section" id="reembolsos" aria-labelledby="refund-title">
       <div class="section-heading">
-        <div><p class="eyebrow">COMPRA CON INFORMACIÓN</p><h2 id="refund-title">Reembolsos<br>y cancelaciones.</h2></div>
-        <p>Última actualización: 18 de septiembre de 2026.</p>
+        <div><p class="eyebrow">BUY WITH CONFIDENCE</p><h2 id="refund-title">Refunds<br>and cancellations.</h2></div>
+        <p>Last updated: September 18, 2026.</p>
       </div>
       <div class="policy-copy">
-        <h3>Devolución dentro de 10 días</h3>
-        <p>Puedes solicitar la devolución íntegra de tu compra dentro de los 10 días corridos siguientes al pago, incluso si ya activaste el acceso. Esta es nuestra política comercial y no limita los derechos que te correspondan por ley.</p>
-        <h3>Problemas de entrega, acceso o cobro</h3>
-        <p>Si hubo un cobro duplicado, no entregamos el acceso o el producto presenta un problema que no podemos solucionar, revisaremos tu caso para corregirlo o devolver el importe correspondiente. Estas solicitudes también pueden presentarse después de los 10 días.</p>
-        <h3>Cómo solicitar un reembolso</h3>
-        <p>Usa el <a href="#contacto">formulario de contacto</a> o escribe a <a href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>. Indica la fecha de compra, el identificador de la operación si lo tienes, tu usuario de Discord y una explicación breve. No envíes contraseñas ni datos completos de tarjetas.</p>
-        <h3>Respuesta y devolución</h3>
-        <p>Responderemos tu solicitud en un máximo de 2 días hábiles. Una vez aprobada, iniciaremos la devolución en hasta 5 días hábiles, preferentemente por el medio de pago original. La fecha en que veas el abono depende del banco o proveedor; te informaremos del estado y de cualquier alternativa necesaria.</p>
-        <h3>Qué ocurre con la licencia</h3>
-        <p>Al realizarse un reembolso íntegro, se cancela el acceso correspondiente a esa compra. Si solo quieres dejar de usar Nordic al finalizar el periodo, no necesitas cancelar cargos futuros: el plan no se renueva automáticamente.</p>
+        <h3>Refund within 10 days</h3>
+        <p>You can request a full refund within 10 calendar days of payment, even if you have already activated access. This is our commercial policy and does not limit your legal rights.</p>
+        <h3>Delivery, access or billing problems</h3>
+        <p>If you were charged twice, we did not deliver access or the product has a problem we cannot resolve, we will review your case to fix it or refund the corresponding amount. You can also submit these requests after the 10-day period.</p>
+        <h3>How to request a refund</h3>
+        <p>Use the <a href="#contacto">contact form</a> or write to <a href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>. Include the purchase date, transaction ID if available, your Discord username and a brief explanation. Do not send passwords or full card details.</p>
+        <h3>Response and refund</h3>
+        <p>We will respond within 2 business days. Once approved, we will initiate the refund within 5 business days, preferably through the original payment method. When the credit appears depends on the bank or provider; we will keep you informed of its status and any necessary alternative.</p>
+        <h3>What happens to the license</h3>
+        <p>A full refund cancels the access associated with that purchase. If you only want to stop using Nordic at the end of the period, you do not need to cancel future charges: the plan does not renew automatically.</p>
       </div>
     </section>
 
     <section class="service-band" id="contacto" aria-labelledby="support-title">
       <div class="shell support-layout">
         <div class="support-copy">
-          <p class="eyebrow">ATENCIÓN DIRECTA</p>
-          <h2 id="support-title">Hablemos<br>de tu acceso.</h2>
-          <p>Consultas sobre el plan, descarga, activación o reembolsos. Nuestro objetivo es responder en hasta 2 días hábiles.</p>
+          <p class="eyebrow">DIRECT SUPPORT</p>
+          <h2 id="support-title">Let's talk<br>about your access.</h2>
+          <p>Questions about the plan, download, activation or refunds. We aim to respond within 2 business days.</p>
           <a class="support-email" href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>
-          <a class="text-link" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">También estamos en Discord <span aria-hidden="true">↗</span></a>
-          <p class="small-copy">Al enviar continuarás a FormSubmit para completar la verificación antispam. Si no puedes completar el envío, escríbenos directamente por correo o Discord.</p>
+          <a class="text-link" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">We're also on Discord <span aria-hidden="true">↗</span></a>
+          <p class="small-copy">Submitting takes you to FormSubmit to complete its anti-spam verification. If you cannot complete submission, contact us directly by email or Discord.</p>
         </div>
         <form class="support-form" action="https://formsubmit.co/noordicdev@gmail.com" method="POST" accept-charset="UTF-8">
-          <input type="hidden" name="_subject" value="Consulta desde la web de Nordic Gaming Browser">
+          <input type="hidden" name="_subject" value="Question from the Nordic Gaming Browser website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_url" value="https://nordicbrowser.com/">
           <div class="form-row">
-            <div class="field"><label for="contact-name">Nombre</label><input id="contact-name" name="name" autocomplete="name" required maxlength="100"></div>
-            <div class="field"><label for="contact-email">Correo de respuesta</label><input id="contact-email" type="email" name="email" autocomplete="email" required maxlength="254"></div>
+            <div class="field"><label for="contact-name">Name</label><input id="contact-name" name="name" autocomplete="name" required maxlength="100"></div>
+            <div class="field"><label for="contact-email">Reply email</label><input id="contact-email" type="email" name="email" autocomplete="email" required maxlength="254"></div>
           </div>
-          <div class="field"><label for="contact-subject">Motivo</label><select id="contact-subject" name="motivo" required><option value="">Selecciona un motivo</option><option>Planes y contratación</option><option>Descarga y activación</option><option>Soporte técnico</option><option>Reembolso</option><option>Privacidad</option><option>Otra consulta</option></select></div>
-          <div class="field"><label for="contact-message">Mensaje</label><textarea id="contact-message" name="message" rows="6" required minlength="20" maxlength="3000" aria-describedby="message-help"></textarea><p id="message-help" class="small-copy">Entre 20 y 3.000 caracteres. Si ya compraste, puedes indicar tu usuario de Discord y la referencia de la operación. No incluyas contraseñas ni datos de tarjetas.</p></div>
-          <label class="consent"><input type="checkbox" name="privacy_consent" value="Aceptada" required><span>He leído la <a href="#privacidad">información de privacidad</a> y acepto el tratamiento de mis datos para atender esta consulta.</span></label>
-          <button class="button primary" type="submit">Enviar consulta <span aria-hidden="true">↗</span></button>
-          <p class="small-copy">El envío se confirma en la página del servicio de formularios. Conserva tu mensaje si aparece un error y contacta por correo.</p>
+          <div class="field"><label for="contact-subject">Subject</label><select id="contact-subject" name="motivo" required><option value="">Select a subject</option><option>Plans and purchases</option><option>Download and activation</option><option>Technical support</option><option>Refund</option><option>Privacy</option><option>Other question</option></select></div>
+          <div class="field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="6" required minlength="20" maxlength="3000" aria-describedby="message-help"></textarea><p id="message-help" class="small-copy">Between 20 and 3,000 characters. If you have already purchased, you may include your Discord username and transaction reference. Do not include passwords or card details.</p></div>
+          <label class="consent"><input type="checkbox" name="privacy_consent" value="Accepted" required><span>I have read the <a href="#privacidad">privacy information</a> and agree to my data being processed to handle this question.</span></label>
+          <button class="button primary" type="submit">Send question <span aria-hidden="true">↗</span></button>
+          <p class="small-copy">Submission is confirmed on the form service's page. Keep your message if an error appears and contact us by email.</p>
         </form>
       </div>
     </section>
 
     <section class="section shell policy-section" id="privacidad" aria-labelledby="privacy-title">
       <div class="section-heading">
-        <div><p class="eyebrow">TUS DATOS</p><h2 id="privacy-title">Privacidad del contacto.</h2></div>
+        <div><p class="eyebrow">YOUR DATA</p><h2 id="privacy-title">Contact privacy.</h2></div>
       </div>
       <div class="policy-copy">
-        <p>Nordic Gaming Browser utiliza el nombre, correo, motivo y mensaje que envíes para responder tu consulta y gestionar el soporte o la solicitud relacionada con tu compra. No usamos este formulario para suscribirte a publicidad.</p>
-        <p>El formulario se procesa mediante FormSubmit y se entrega al correo de soporte de Nordic. FormSubmit informa que conserva los envíos durante 30 días. Consulta su <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">política de privacidad</a> antes de enviar información. La verificación antispam se realiza en su servicio.</p>
-        <p>Conservamos la correspondencia necesaria para atender tu solicitud y cumplir las obligaciones aplicables. Puedes consultar por tus datos o pedir su corrección o eliminación escribiendo a <a href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>; te informaremos si debemos conservar algún antecedente por una obligación legal.</p>
-        <p>Esta información corresponde al sitio y al formulario de contacto. El acceso al navegador utiliza tu cuenta de Discord y la validación de tu suscripción.</p>
+        <p>Nordic Gaming Browser uses the name, email, subject and message you submit to answer your question and handle support or requests related to your purchase. We do not use this form to subscribe you to advertising.</p>
+        <p>The form is processed by FormSubmit and delivered to Nordic's support email. FormSubmit states that it retains submissions for 30 days. Review its <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">privacy policy</a> before submitting information. Anti-spam verification takes place on its service.</p>
+        <p>We retain the correspondence needed to handle your request and meet applicable obligations. You can ask about your data or request its correction or deletion by writing to <a href="mailto:noordicdev@gmail.com">noordicdev@gmail.com</a>; we will tell you if we need to retain any information due to a legal obligation.</p>
+        <p>This information covers the website and contact form. Browser access uses your Discord account and subscription validation.</p>
       </div>
     </section>
 
     <section class="contact shell" id="discord" aria-labelledby="contact-title">
-      <div class="contact-top"><p class="eyebrow">NOS VEMOS EN DISCORD</p><span class="contact-label">COMUNIDAD NORDIC <span aria-hidden="true">↗</span></span></div>
+      <div class="contact-top"><p class="eyebrow">SEE YOU ON DISCORD</p><span class="contact-label">NORDIC COMMUNITY <span aria-hidden="true">↗</span></span></div>
       <div class="contact-content">
-        <div><h2 id="contact-title">Tu próxima partida<br>empieza acá.</h2><p>Únete a la comunidad, consigue Nordic Gaming Browser y recibe ayuda para empezar. Tu próxima partida te espera.</p></div>
-        <a class="button primary contact-button" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Ir a Discord <span aria-hidden="true">↗</span></a>
+        <div><h2 id="contact-title">Your next match<br>starts here.</h2><p>Join the community, get Nordic Gaming Browser and receive help getting started. Your next match awaits.</p></div>
+        <a class="button primary contact-button" href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Go to Discord <span aria-hidden="true">↗</span></a>
       </div>
-      <p class="contact-note">Login con Discord · Suscripción dentro de Nordic Gaming Browser · Pagos con Webpay o PayPal</p>
+      <p class="contact-note">Discord sign-in · Subscription inside Nordic Gaming Browser · Payments with Webpay or PayPal</p>
     </section>
   </main>
 
   <footer class="footer shell">
     <div class="footer-brand"><img src="assets/favicon.png" width="28" height="28" alt=""><span>© 2026 Nordic Gaming Browser</span></div>
-    <div class="footer-links"><a href="/creator/">Creator: términos y privacidad</a><a href="#planes">Plan mensual</a><a href="#entrega">Entrega</a><a href="#reembolsos">Reembolsos</a><a href="#contacto">Contacto</a><a href="#privacidad">Privacidad</a><a href="https://github.com/noordic/nordic-gaming-browser" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Discord <span aria-hidden="true">↗</span></a><a href="#inicio">Volver arriba ↑</a></div>
+    <div class="footer-links"><a href="/creator/">Creator: terms and privacy</a><a href="#planes">Monthly plan</a><a href="#entrega">Delivery</a><a href="#reembolsos">Refunds</a><a href="#contacto">Contact</a><a href="#privacidad">Privacy</a><a href="https://github.com/noordic/nordic-gaming-browser" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://discord.gg/AZUxGHRaNY" target="_blank" rel="noopener noreferrer">Discord <span aria-hidden="true">↗</span></a><a href="#inicio">Back to top ↑</a></div>
   </footer>
 </body>
 </html>
