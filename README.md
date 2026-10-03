@@ -13,7 +13,7 @@ Sitio público: https://nordicbrowser.com/
 
 - Soporte: `noordicdev@gmail.com`, tomado del comando `access.support` del navegador y su documentación.
 - Acceso ligado a Discord: documentación de integración y cliente Commercial.
-- Mensual de $2.999 CLP con Webpay; PayPal cobra en USD y el importe se confirma dentro de Nordic antes del pago. Actualizado por indicación del titular. Se mantienen las condiciones publicadas de un equipo, una sesión y sin renovación automática.
+- Dos tarjetas de pago juntas para el plan mensual: Webpay por $2.999 CLP y PayPal por $3.99 USD. El importe y las fechas se confirman dentro de Nordic antes del pago. Actualizado por indicación del titular. Se mantienen las condiciones publicadas de un equipo, una sesión y sin renovación automática.
 - Hay una diferencia documental entre mes calendario y 30 días. El sitio describe un periodo mensual y exige confirmar fechas exactas antes del pago; conviene unificar esta definición en el producto.
 - Por indicación del titular, el sitio informa pagos con Webpay o PayPal e inicio de sesión con Discord y compra de suscripción dentro de Nordic Gaming Browser. El sitio no implementa login ni checkout.
 - No se publica una versión o enlace de instalador no verificado. El enlace oficial se entrega por soporte.
